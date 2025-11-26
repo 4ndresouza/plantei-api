@@ -1,7 +1,12 @@
 import { Sequelize } from 'sequelize'
+import dotenv from 'dotenv'
+
+dontevn.config()
+
+const BASE_URL_DB = process.env.BASE_URL_DB;
 
 export const sequelize = new Sequelize(
-    'postgresql://neondb_owner:npg_7AViXEFWeg5U@ep-polished-smoke-ad3mfwae-pooler.c-2.us-east-1.aws.neon.tech/planteidb?sslmode=require&channel_binding=require',
+    BASE_URL_DB,
     {
         dialect: 'postgres',
         dialectOptions: {
